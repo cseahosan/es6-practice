@@ -1,0 +1,41 @@
+npm init -y
+npm install --save-dev babel-core babel-preset-env
+create .babelrc file to root
+add this code to .babelrc file for convert es6 to es5
+{
+  "presets": [
+    "babel-preset-env"
+  ]
+}
+
+configure webpack for bundle codes
+npm install --save-dev webpack babel-loader   ///babel-loader for work with babel and webpack
+npm install --save-dev webpack-cli -D
+
+create src/index.js
+create webpack.config.js
+
+add the given code to webpack.config.js
+const path = require('path');
+
+const config = {
+    entry: './src/index.js',
+    output: {
+        path: path.resolve(__dirname, 'dist'),
+        filename: 'bundle.js'
+    },
+    module: {
+        rules: [
+            {
+                test: /\.js$/,
+                use: {
+                    loader: 'babel-loader'
+                }
+            }
+        ]
+    }
+}
+
+module.exports = config
+
+https://medium.com/@chaim1221/installing-babel-core-and-babel-loader-i-run-into-the-issue-that-aea658f803c7
