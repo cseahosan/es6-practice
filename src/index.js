@@ -1,33 +1,36 @@
-// function print() {
-//     console.log('Normal Function')
-// }
-// print();
+//problem: its giving output window object
 
-// const print = () => {
-//     console.log('Arrow Function')
-// }
-// print();
-
-// const print = (message) => {
-//     console.log(message)
+// const obj = {
+//     name: 'Ahosan Habib',
+//     print: function () {
+//         setTimeout(function () {
+//             console.log(this)
+//         },1000)
+//     }
 // }
 //
-// print('Arrow Function');
+// obj.print();
 
-//  if single parameter then no need parenthesis
-// const print = message => {
-//     console.log(message)
+//solution 1
+// const obj = {
+//     name: 'Ahosan Habib',
+//     print: function () {
+//         setTimeout(function () {
+//             console.log(this)
+//         }.bind(this), 1000)
+//     }
 // }
 //
-// print('Arrow Function');
+// obj.print();
 
-// const addMe = (a, b) => {
-//     return a + b;
-// }
-//
-// console.log(addMe(5, 10))
+// solution 2 (using arrow function)
+const obj = {
+    name: 'Ahosan Habib',
+    print: function () {
+        setTimeout(()=>{
+            console.log(this)
+        },1000)
+    }
+}
 
-// if function return only one line no need curly braces and return
-const addMe = (a, b) => a + b;
-
-console.log(addMe(5, 10))
+obj.print();
