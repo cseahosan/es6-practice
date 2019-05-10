@@ -39,3 +39,5 @@ const config = {
 module.exports = config
 
 https://medium.com/@chaim1221/installing-babel-core-and-babel-loader-i-run-into-the-issue-that-aea658f803c7
+
+npm install -D webpack-dev-server
