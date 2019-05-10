@@ -1,21 +1,33 @@
-// let vs  const vs var
-
-const a = 10;
-
-console.log(a);
-
-// var a = 10;
-//
-// if(true){
-//     var a = 20;
-//     console.log(a);
+// function print() {
+//     console.log('Normal Function')
 // }
-// console.log(a);
-//
-// let a = 10;
-//
-// if(true){
-//     let a = 20;
-//     console.log(a);
+// print();
+
+// const print = () => {
+//     console.log('Arrow Function')
 // }
-// console.log(a);
+// print();
+
+// const print = (message) => {
+//     console.log(message)
+// }
+//
+// print('Arrow Function');
+
+//  if single parameter then no need parenthesis
+// const print = message => {
+//     console.log(message)
+// }
+//
+// print('Arrow Function');
+
+// const addMe = (a, b) => {
+//     return a + b;
+// }
+//
+// console.log(addMe(5, 10))
+
+// if function return only one line no need curly braces and return
+const addMe = (a, b) => a + b;
+
+console.log(addMe(5, 10))
