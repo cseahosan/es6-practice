@@ -1,4 +1,6 @@
-// import * as math from './math'; // for access all from math.js
-import {add, sub}  from './math'; // destructuring for access only add and sub method
+import Person from './Person' //this syntax using because of export default
 
-console.log(add(1, 20))
+let p1 = new Person('Ahosan Habib', 'cseahosan@gmail.com')
+
+console.log(p1.name)
+p1.print()
