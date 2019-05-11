@@ -1,6 +1,5 @@
-import Person from './Person' //this syntax using because of export default
+import Student from './Student'
 
-let p1 = new Person('Ahosan Habib', 'cseahosan@gmail.com')
+let st1 = new Student('Ahsoan Habib', 'cseahosan@gmail.com', '1456')
 
-console.log(p1.name)
-p1.print()
+st1.welcome()
